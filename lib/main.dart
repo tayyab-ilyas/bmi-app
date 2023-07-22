@@ -33,17 +33,17 @@ class _BMICalculatorState extends State<BMICalculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('BMI Calculator'),
+        title:const Text('BMI Calculator'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+           const Text(
               'Enter Your Height (cm)',
               style: TextStyle(fontSize: 20.0),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Slider(
               value: height,
               min: 100.0,
@@ -56,14 +56,14 @@ class _BMICalculatorState extends State<BMICalculator> {
             ),
             Text(
               height.toStringAsFixed(1),
-              style: TextStyle(fontSize: 24.0),
+              style:const TextStyle(fontSize: 24.0),
             ),
-            SizedBox(height: 20.0),
-            Text(
+           const SizedBox(height: 20.0),
+           const Text(
               'Enter Your Weight (kg)',
               style: TextStyle(fontSize: 20.0),
             ),
-            SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Slider(
               value: weight,
               min: 30.0,
@@ -76,19 +76,19 @@ class _BMICalculatorState extends State<BMICalculator> {
             ),
             Text(
               weight.toStringAsFixed(1),
-              style: TextStyle(fontSize: 24.0),
+              style:const TextStyle(fontSize: 24.0),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
                 calculateBMI();
               },
-              child: Text('Calculate BMI'),
+              child: const Text('Calculate BMI'),
             ),
-            SizedBox(height: 20.0),
+            const SizedBox(height: 20.0),
             Text(
               'BMI: ${bmi.toStringAsFixed(2)}',
-              style: TextStyle(fontSize: 24.0),
+              style: const TextStyle(fontSize: 24.0),
             ),
           ],
         ),
